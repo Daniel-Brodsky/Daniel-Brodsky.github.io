@@ -2,27 +2,31 @@
 <title>Daniel Brodsky · Offensive Security</title>
 <style>[hidden]{display:none!important}
 :root{--bg:#0a0e17;--card:#0f1522;--fg:#d7dde8;--mut:#7f8aa3;--acc:#39ff88;--red:#ff4d6d}
-*{box-sizing:border-box}body{margin:0;font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;background:var(--bg);color:var(--fg);
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:flex;flex-direction:column;font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;background:var(--bg);color:var(--fg);
 background-image:linear-gradient(rgba(57,255,136,.03) 1px,transparent 1px);background-size:100% 3px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:16px 48px;border-bottom:1px solid #1a2233}
-nav b{color:var(--acc)}nav b i{color:var(--red);font-style:normal}nav a{color:var(--mut);margin:0 10px;text-decoration:none;font-size:13px}
+nav{border-bottom:1px solid #1a2233}nav>.in{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin-inline:auto;padding:16px 48px}
+nav b{color:var(--acc)}nav b i{color:var(--red);font-style:normal}nav a{color:var(--mut);margin:0 10px;text-decoration:none;font-size:14px}
 .lang{border:1px solid var(--acc);color:var(--acc);background:none;padding:5px 12px;border-radius:4px;font-family:inherit;cursor:pointer;margin-inline-start:14px}
-.wrap{max-width:1100px;padding:0 48px}
+.wrap{max-width:1100px;width:100%;margin-inline:auto;padding:0 48px;flex:1 0 auto}
 .term{margin:44px 0 26px;background:#05080f;border:1px solid #1d2a3f;border-radius:8px;overflow:hidden;max-width:760px}
 .bar{background:#111a2a;padding:8px 12px;font-size:12px;color:var(--mut)}.bar span{display:inline-block;width:10px;height:10px;border-radius:50%;margin-inline-end:6px}
 .body{padding:18px 20px;font-size:14px;line-height:1.75}.p{color:var(--acc)}.r{color:var(--red)}.m{color:var(--mut)}
 h1{font-size:40px;margin:6px 0}.cur{display:inline-block;width:10px;height:18px;background:var(--acc);vertical-align:middle;animation:b 1s steps(1) infinite}@keyframes b{50%{opacity:0}}
 .btn{unicode-bidi:isolate;display:inline-block;margin:6px 10px 0 0;padding:9px 16px;border:1px solid var(--acc);color:var(--acc);text-decoration:none;font-size:13px;border-radius:4px}
 .btn.f{background:var(--acc);color:#05080f}.btn.x{border-color:var(--red);color:var(--red)}
-.hero{display:flex;gap:20px;align-items:stretch;margin:44px 0 26px}.hero .term{margin:0;flex:1 1 auto}.hero .side{flex:0 0 320px;white-space:nowrap}@media(max-width:900px){.hero{flex-direction:column}.hero .side{flex:auto}}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0 50px}
+.hero{display:flex;gap:20px;align-items:flex-start;margin:44px 0 26px}.hero .term{margin:0;flex:1 1 auto;min-width:0}.hero .side{flex:0 0 320px}@media(max-width:900px){.hero{flex-direction:column;align-items:stretch}.hero .side{flex:auto}}
+.term pre{margin:0;font:inherit;white-space:pre;overflow-x:auto;max-width:100%}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0 50px;align-items:start}
 .c{background:var(--card);border:1px solid #1a2233;border-radius:8px;padding:18px}.c h3{margin:0 0 8px;font-size:14px;color:var(--acc)}.c h3::before{content:"> ";color:var(--red)}
-.c p{color:var(--mut);font-size:13px;line-height:1.6;margin:0}.chips span{display:inline-block;font-size:11px;border:1px solid #26324a;padding:2px 8px;margin:8px 6px 0 0;color:#aab4cc;border-radius:3px}
-[dir=rtl] body,[dir=rtl] .c p{font-family:"Heebo","Rubik",system-ui,sans-serif}
-.lang .lo,[dir=rtl] .lang .lh{color:var(--acc);font-weight:700}.lang .lh,[dir=rtl] .lang .lo{color:#5b6b85;font-weight:400}[dir=rtl] .term .he{display:block;text-align:right;unicode-bidi:isolate}[dir=rtl] .term{margin-left:auto}.he{display:none}[dir=rtl] .he{display:revert}[dir=rtl] .en{display:none}
-[dir=rtl] .term{font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace}.term .body .en{display:block}[dir=rtl] .term .body .en{display:none}@media(max-width:700px){.wrap{padding:0 16px}.hero{margin:20px 0}.grid{grid-template-columns:1fr}h1{font-size:28px}.body{font-size:13px;padding:14px}.hero .side{white-space:normal}}nav b{margin-right:auto}[dir=rtl] nav b{margin-right:0;margin-left:auto}.hero .term{margin-left:0!important;margin-right:0!important}@media(max-width:700px){nav{flex-wrap:wrap;padding:12px 16px 0}nav b{order:1}nav .lang{order:2;margin:0}nav>div{order:3;width:100%;display:flex;overflow-x:auto;white-space:nowrap;margin-top:10px;border-top:1px solid #1a2233;scrollbar-width:none}nav>div::-webkit-scrollbar{display:none}nav>div a{margin:0;padding:10px 12px;font-size:12px;flex:0 0 auto}nav>div a:first-child{padding-inline-start:0}}</style></head><body id="top">
-<nav><b dir="ltr">root@brodsky<i>:</i>~#</b><div>
+.c p{color:var(--mut);font-size:15px;line-height:1.65;margin:0}.chips span{display:inline-block;font-size:12.5px;border:1px solid #26324a;padding:2px 8px;margin:8px 6px 0 0;color:#aab4cc;border-radius:3px}
+.certs{list-style:none;margin:0;padding:0;color:var(--mut);font-size:15px;line-height:1.65}.certs li{position:relative;padding-inline-start:18px;margin:0 0 8px}.certs li:last-child{margin:0}.certs li::before{content:"\25B8";position:absolute;inset-inline-start:0;color:var(--acc)}.certs .m{display:block;font-size:13.5px;color:#66728a}
+footer{border-top:1px solid #1a2233;color:var(--mut);font-size:13px}footer>.in{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;max-width:1100px;margin-inline:auto;padding:18px 48px}footer a{color:var(--mut);text-decoration:none;margin-inline-start:14px}footer a:hover,nav a:hover{color:var(--acc)}
+[dir=rtl] body,[dir=rtl] .c p,[dir=rtl] .certs{font-family:"Heebo","Rubik",system-ui,sans-serif}
+.lang .lo,[dir=rtl] .lang .lh{color:var(--acc);font-weight:700}.lang .lh,[dir=rtl] .lang .lo{color:#5b6b85;font-weight:400}[dir=rtl] .term .he{display:block;direction:rtl;text-align:left;unicode-bidi:isolate}.he{display:none}[dir=rtl] .he{display:revert}[dir=rtl] .en{display:none}
+[dir=rtl] .term{font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace}.term .body .en{display:block}[dir=rtl] .term .body .en{display:none}@media(max-width:700px){.wrap{padding:0 16px}.hero{margin:20px 0}.grid{grid-template-columns:1fr}h1{font-size:28px}.body{font-size:13px;padding:14px}nav>.in,footer>.in{padding-left:16px;padding-right:16px}}nav b{margin-right:auto}[dir=rtl] nav b{margin-right:0;margin-left:auto}@media(max-width:700px){nav>.in{flex-wrap:wrap;padding:12px 16px 0}nav b{order:1}nav .lang{order:2;margin:0}nav .links{order:3;width:100%;display:flex;flex-wrap:wrap;gap:0 4px;margin-top:10px;padding:4px 0;border-top:1px solid #1a2233}nav .links a{margin:0;padding:8px 12px 8px 0;font-size:14px;white-space:nowrap}[dir=rtl] nav .links a{padding:8px 0 8px 12px}}</style></head><body id="top">
+<nav><div class="in"><b dir="ltr">root@brodsky<i>:</i>~#</b><div class="links">
 <a href="#top"><span class="en">About</span><span class="he">אודות</span></a><a href="#projects"><span class="en">Projects</span><span class="he">פרויקטים</span></a><a href="#certs"><span class="en">Certifications</span><span class="he">הסמכות</span></a><a href="#skills"><span class="en">Skills</span><span class="he">כלים</span></a><a class="wu" hidden><span class="en">Writeups</span><span class="he">כתבות</span></a><a href="https://www.linkedin.com/in/daniel-brodsky-it" target="_blank" rel="noopener"><span class="en">Contact</span><span class="he">צור קשר</span></a>
-</div><button class="lang" dir="ltr" onclick="var h=document.documentElement;var r=h.dir!='rtl';h.dir=r?'rtl':'ltr';h.lang=r?'he':'en'"><span class="lo">EN</span> | <span class="lh">HE</span></button></nav>
+</div><button class="lang" dir="ltr" onclick="var h=document.documentElement;var r=h.dir!='rtl';h.dir=r?'rtl':'ltr';h.lang=r?'he':'en'"><span class="lo">EN</span> | <span class="lh">HE</span></button></div></nav>
 <div class="wrap">
 <div class="hero"><div class="term" dir="ltr"><div class="bar"><span style="background:#ff5f57"></span><span style="background:#febc2e"></span><span style="background:#28c840"></span> zsh — recon</div>
 <div class="body" dir="ltr"><span class="p">┌──(daniel㉿kali)-[~]</span><br><span class="p">└─$</span> whoami<br>
@@ -32,12 +36,21 @@ h1{font-size:40px;margin:6px 0}.cur{display:inline-block;width:10px;height:18px;
 <span class="en">Thinking like an attacker to defend better: web app testing, recon, CTFs,<br>and turning attacker TTPs into detections.</span>
 <span class="he" dir="rtl">חושב כמו תוקף כדי להגן טוב יותר: בדיקות Web, ‏Recon, ‏CTF, והפיכת TTPs של תוקפים לזיהויים.</span>
 <span class="p">└─$</span> <span class="cur"></span></div></div><div class="term side" dir="ltr"><div class="bar"><span style="background:#ff5f57"></span><span style="background:#febc2e"></span><span style="background:#28c840"></span> nmap</div>
-<div class="body"><span class="p">└─$</span> nmap -sV daniel<br><span class="m">PORT&nbsp;&nbsp;&nbsp;STATE SERVICE</span><br>
-443/tcp <span class="r">filtered</span>&nbsp; web-appsec<br>53/udp&nbsp; <span class="r">filtered</span>&nbsp; recon-osint<br>8080/tcp <span class="r">filtered</span> burp-suite<br>22/tcp&nbsp; <span class="r">filtered</span>&nbsp; linux<br>9997/tcp <span class="r">filtered</span> siem<br>1337/tcp <span class="r">filtered</span> ctf<br><br><span class="m">Nmap done: 1 host up</span></div></div></div>
+<div class="body"><pre><span class="p">└─$</span> nmap -sV daniel
+<span class="m">PORT     STATE    SERVICE</span>
+443/tcp  <span class="r">filtered</span> web-appsec
+53/udp   <span class="r">filtered</span> recon-osint
+8080/tcp <span class="r">filtered</span> burp-suite
+22/tcp   <span class="r">filtered</span> linux
+9997/tcp <span class="r">filtered</span> siem
+1337/tcp <span class="r">filtered</span> ctf
+
+<span class="m">Nmap done: 1 host up</span></pre></div></div></div>
 <a class="btn f" href="#projects"><span class="en">./projects</span><span class="he">./פרויקטים</span></a><a class="btn" href="https://github.com/Daniel-Brodsky" target="_blank" rel="noopener">GitHub</a><a class="btn" href="https://www.linkedin.com/in/daniel-brodsky-it" target="_blank" rel="noopener">LinkedIn</a><a class="btn x wu" hidden><span class="en">./writeups --ctf</span><span class="he">./כתבות --ctf</span></a>
 <div class="grid" id="projects">
 <div class="c"><h3><a href="https://github.com/Daniel-Brodsky/Protected-file-analyzer-docker" target="_blank" rel="noopener" style="color:inherit">Protected File Analyzer</a></h3><p class="en">Dockerized tool for analyzing protected files with a hardened recovery policy.</p><p class="he">כלי Docker לניתוח קבצים מוגנים עם מדיניות שחזור מוקשחת.</p><div class="chips"><span>Python</span><span>Docker</span><span>YARA</span><span>Hardening</span></div></div>
-<div class="c" id="certs"><h3><span class="en">Certifications</span><span class="he">הסמכות</span></h3><p class="en">Hacking Defined Expert · See Security (honors, 100 on practical)<br>CHCSS · KERNELiOS<br>LPI Linux Essentials</p><p class="he"><bdi>Hacking Defined Expert · See Security</bdi><br>בהצטיינות, 100 במבחן המעשי<br>CHCSS · KERNELiOS<br>LPI Linux Essentials</p></div>
+<div class="c" id="certs"><h3><span class="en">Certifications</span><span class="he">הסמכות</span></h3><ul class="certs en"><li>Hacking Defined Expert · See Security<span class="m">honors, 100 on practical</span></li><li>CHCSS · KERNELiOS</li><li>LPI Linux Essentials</li></ul><ul class="certs he"><li><bdi>Hacking Defined Expert · See Security</bdi><span class="m">בהצטיינות, 100 במבחן המעשי</span></li><li><bdi>CHCSS · KERNELiOS</bdi></li><li><bdi>LPI Linux Essentials</bdi></li></ul></div>
 <div class="c" id="skills"><h3><span class="en">Skill Set</span><span class="he">כלים</span></h3><p class="en">Offensive testing, recon and SOC investigations.</p><p class="he">בדיקות התקפיות, Recon וחקירות SOC.</p><div class="chips"><span>Burp Suite</span><span>Kali</span><span>Wireshark</span><span>Recon</span><span>Web AppSec</span><span>Phishing Analysis</span><span>Log Analysis</span><span>Linux</span><span>Windows Internals</span></div></div>
 <!-- WRITEUPS: remove hidden on .wu when first CTF report exists --><div class="c wu" hidden><h3>Writeups</h3><p class="en">CTF walkthroughs, recon methodology and OSINT notes. Coming soon.</p><p class="he">פתרונות CTF, מתודולוגיית Recon והערות OSINT. בקרוב.</p><div class="chips"><span>CTF</span><span>Red Team</span><span>OSINT</span></div></div>
-</div></div></body></html>
+</div></div>
+<footer><div class="in"><span dir="ltr"><span class="p">└─$</span> exit</span><span><span dir="ltr">© 2026 Daniel Brodsky</span><a href="https://github.com/Daniel-Brodsky" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/daniel-brodsky-it" target="_blank" rel="noopener">LinkedIn</a></span></div></footer></body></html>
