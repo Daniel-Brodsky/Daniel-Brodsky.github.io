@@ -1,0 +1,17 @@
+# UI strings per language. Page body text lives in index.html / he/index.html.
+en:
+  title: "Daniel Brodsky · SOC Analyst & Offensive Security | AppSec, OSINT, CTF"
+  description: "Daniel Brodsky: offensive-minded SOC Analyst in Israel. Web AppSec testing, recon & OSINT, CTFs, and turning attacker TTPs into detections."
+  og_locale: en_US
+  og_locale_alt: he_IL
+  og_image_alt: "Daniel Brodsky · SOC Analyst · Offensive Security"
+  nav: {about: "About", projects: "Projects", certs: "Certifications", skills: "Skills", writeups: "Writeups", contact: "Contact"}
+  switch: {href: "/he/", hreflang: "he", label: "עברית"}
+he:
+  title: "דניאל ברודסקי · אנליסט SOC ואבטחה התקפית"
+  description: "דניאל ברודסקי: אנליסט SOC עם חשיבה התקפית בישראל. בדיקות אבטחה ל-Web, ‏Recon ו-OSINT, ‏CTF, והפיכת TTPs של תוקפים לזיהויים."
+  og_locale: he_IL
+  og_locale_alt: en_US
+  og_image_alt: "Daniel Brodsky · SOC Analyst · Offensive Security"
+  nav: {about: "אודות", projects: "פרויקטים", certs: "הסמכות", skills: "כלים", writeups: "כתבות", contact: "צור קשר"}
+  switch: {href: "/", hreflang: "en", label: "English"}

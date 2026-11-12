@@ -1,0 +1,29 @@
+# Built by GitHub Pages (Jekyll 3.10 via the github-pages gem).
+title: Daniel Brodsky
+url: "https://danielbrodsky.net"
+baseurl: ""
+lang: en
+theme: null  # no Primer theme CSS; the site uses assets/site.css
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# jekyll-seo-tag is enabled for future writeup pages but is NOT invoked ({% seo %})
+# in _layouts/base.html: head/OG/hreflang/JSON-LD are hand-written to avoid duplicates.
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Local-build files must never be served by Pages.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+  - .jekyll-cache
+  - .sass-cache
+  - node_modules
+  - README.md

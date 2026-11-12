@@ -1,0 +1,28 @@
+---
+layout: base
+lang: he
+---
+<div class="hero"><div class="term" dir="ltr"><div class="bar"><span style="background:#ff5f57"></span><span style="background:#febc2e"></span><span style="background:#28c840"></span> zsh — recon</div>
+<div class="body" dir="ltr"><span class="p">┌──(daniel㉿kali)-[~]</span><br><span class="p">└─$</span> whoami<br>
+<h1>Daniel Brodsky</h1>
+<span class="p">└─$</span> cat role.txt<br><span class="ln" dir="rtl">אנליסט SOC עם חשיבה התקפית · ישראל</span>
+<span class="p">└─$</span> cat mission.txt<br>
+<span class="ln" dir="rtl">חושב כמו תוקף כדי להגן טוב יותר: בדיקות Web, ‏Recon, ‏CTF, והפיכת TTPs של תוקפים לזיהויים.</span>
+<span class="p">└─$</span> <span class="cur"></span></div></div><div class="term side" dir="ltr"><div class="bar"><span style="background:#ff5f57"></span><span style="background:#febc2e"></span><span style="background:#28c840"></span> nmap</div>
+<div class="body"><pre><span class="p">└─$</span> nmap -sV daniel
+<span class="m">PORT     STATE    SERVICE</span>
+443/tcp  <span class="r">filtered</span> web-appsec
+53/udp   <span class="r">filtered</span> recon-osint
+8080/tcp <span class="r">filtered</span> burp-suite
+22/tcp   <span class="r">filtered</span> linux
+9997/tcp <span class="r">filtered</span> siem
+1337/tcp <span class="r">filtered</span> ctf
+
+<span class="m">Nmap done: 1 host up</span></pre></div></div></div>
+<a class="btn f" href="#projects">./פרויקטים</a><a class="btn" href="https://github.com/Daniel-Brodsky" target="_blank" rel="noopener">GitHub</a><a class="btn" href="https://www.linkedin.com/in/daniel-brodsky-it" target="_blank" rel="noopener">LinkedIn</a><a class="btn x wu" hidden>./כתבות --ctf</a>
+<div class="grid" id="projects">
+<div class="c"><h3><a href="https://github.com/Daniel-Brodsky/Protected-file-analyzer-docker" target="_blank" rel="noopener" style="color:inherit">Protected File Analyzer</a></h3><p>כלי Docker לניתוח קבצים מוגנים עם מדיניות שחזור מוקשחת.</p><div class="chips"><span>Python</span><span>Docker</span><span>YARA</span><span>Hardening</span></div></div>
+<div class="c" id="certs"><h3>הסמכות</h3><ul class="certs"><li><bdi>Hacking Defined Expert · See Security</bdi><span class="m">בהצטיינות, 100 במבחן המעשי</span></li><li><bdi>CHCSS · KERNELiOS</bdi></li><li><bdi>LPI Linux Essentials</bdi></li></ul></div>
+<div class="c" id="skills"><h3>כלים</h3><p>בדיקות התקפיות, Recon וחקירות SOC.</p><div class="chips"><span>Burp Suite</span><span>Kali</span><span>Wireshark</span><span>Recon</span><span>Web AppSec</span><span>Phishing Analysis</span><span>Log Analysis</span><span>Linux</span><span>Windows Internals</span></div></div>
+<!-- WRITEUPS: remove hidden on .wu when first CTF report exists --><div class="c wu" hidden><h3>Writeups</h3><p>פתרונות CTF, מתודולוגיית Recon והערות OSINT. בקרוב.</p><div class="chips"><span>CTF</span><span>Red Team</span><span>OSINT</span></div></div>
+</div>
