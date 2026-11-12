@@ -16,7 +16,7 @@ h1{font-size:40px;margin:6px 0}.cur{display:inline-block;width:10px;height:18px;
 .term pre{margin:0;font:inherit;white-space:pre;overflow-x:auto;max-width:100%}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0 50px;align-items:start}
 .c{background:var(--card);border:1px solid #1a2233;border-radius:8px;padding:18px}.c h3{margin:0 0 8px;font-size:14px;color:var(--acc)}.c h3::before{content:"> ";color:var(--red)}
-.c p{color:var(--mut);font-size:15px;line-height:1.65;margin:0}.chips span{display:inline-block;font-size:12.5px;border:1px solid #26324a;padding:2px 8px;margin:8px 6px 0 0;color:#aab4cc;border-radius:3px}
+.c p{color:var(--mut);font-size:15px;line-height:1.65;margin:0}code{font:inherit;color:inherit;unicode-bidi:isolate;white-space:nowrap}.nw{white-space:nowrap}.chips span{display:inline-block;font-size:12.5px;border:1px solid #26324a;padding:2px 8px;margin:8px 6px 0 0;color:#aab4cc;border-radius:3px}
 .certs{list-style:none;margin:0;padding:0;color:var(--mut);font-size:15px;line-height:1.65}.certs li{position:relative;padding-inline-start:18px;margin:0 0 8px}.certs li:last-child{margin:0}.certs li::before{content:"\25B8";position:absolute;inset-inline-start:0;color:var(--acc)}.certs .m{display:block;font-size:13.5px;color:#66728a}
 footer{border-top:1px solid #1a2233;color:var(--mut);font-size:13px}footer>.in{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;max-width:1100px;margin-inline:auto;padding:18px 48px}footer a{color:var(--mut);text-decoration:none;margin-inline-start:14px}footer a:hover,nav a:hover{color:var(--acc)}
 [dir=rtl] body,[dir=rtl] .c p,[dir=rtl] .certs{font-family:"Heebo","Rubik",system-ui,sans-serif}
