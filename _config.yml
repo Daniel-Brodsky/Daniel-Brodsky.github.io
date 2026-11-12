@@ -27,3 +27,10 @@ exclude:
   - .sass-cache
   - node_modules
   - README.md
+
+# Google Search Console verification file: served as-is, kept out of sitemap.xml.
+defaults:
+  - scope:
+      path: "google5850687130ea81ad.html"
+    values:
+      sitemap: false
